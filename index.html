@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODIHA TERMINAL</title>
+</head>
+<body>
+    <div id="terminal">
+        <div id="output"></div>
+        <div id="input-container">
+            <span id="prompt-symbol">$</span>
+            <input type="text" id="prompt" placeholder="Enter command here...">
+        </div>
+    </div>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #000;
+            color: green;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #terminal {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+
+        #output {
+            flex-grow: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        #output p {
+            margin: 0;
+            white-space: pre-wrap;
+        }
+
+        #input-container {
+            display: flex;
+            align-items: center;
+        }
+
+        #prompt-symbol {
+            margin-right: 10px;
+        }
+
+        input {
+            flex-grow: 1;
+            background-color: transparent;
+            color: green;
+            border: none;
+            outline: none;
+            font-size: 1.3rem;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        ::placeholder {
+            color: #007700;
+        }
+    </style>
+
+    <script src="./terminal.js"></script>
+</body>
+</html>
