@@ -1,5 +1,6 @@
 const output_el = document.getElementById("output");
 const input_el = document.getElementById("prompt");
+const prefix = "@CODIHA#~"; 
 
 input_el.addEventListener("keypress", (event) => {
     const text = input_el.value.trim();
@@ -10,7 +11,7 @@ input_el.addEventListener("keypress", (event) => {
 });
 
 function processCommand(command) {
-    message(`$ ${command}`, "green");
+    message(`${prefix} $${command}`,"green");
 
     if (command === "help") {
         message("Commands: help, clear, about, triangle <integer>, echo <message>,  <num> <operator> <num>", "white");
@@ -88,5 +89,11 @@ function processMathCommand(command) {
 
     message(`Result: ${result}`, "blue");
 }
+
+function changeTerminalColor(color) {
+    document.body.style.backgroundColor = color;
+}
+
+
 
 
