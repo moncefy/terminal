@@ -10,6 +10,7 @@ input_el.addEventListener("keypress", (event) => {
     }
 });
 
+
 function processCommand(command) {
     message(`${prefix} $${command}`,"green");
 
@@ -90,9 +91,6 @@ function processMathCommand(command) {
     message(`Result: ${result}`, "blue");
 }
 
-function changeTerminalColor(color) {
-    document.body.style.backgroundColor = color;
-}
 
 
 
